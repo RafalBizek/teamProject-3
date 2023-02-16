@@ -21,6 +21,16 @@
 
   &__item {
     padding: 161px 39px 41px 41px;
+    border-radius: 24px;
+    &--ice-cream{
+      background: #FFB8CA;
+    }
+    &--ice-caffee{
+      background: #F0D1A5;
+    }
+    &--milkshakes{
+      background: #C2E297;
+    }
   }
   &__name {
     font-family: $fontSecondary;
