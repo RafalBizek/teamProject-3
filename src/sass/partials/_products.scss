@@ -9,6 +9,17 @@
     color: $paragraph-color;
 
     margin: 121px 0 15px;
+
+    @include tablet{
+      font-size: 26px;
+      line-height: 1.15;
+      margin-top:122px;
+    }
+    @include desktop{
+      font-size: 30px;
+      line-height: 1.13;
+      margin-top:127px;
+    }
   }
   &__title {
     font-family: $fontSecondary;
@@ -17,11 +28,39 @@
     text-align: center;
     text-transform: uppercase;
     color: $active-color;
+    @include tablet{
+      font-size: 48px;
+    }
+    @include desktop{
+      font-size: 58px;
+      line-height: 1.14;
+    }
   }
+  &__items {
+    @include tablet{
 
+      display: flex;
+      gap: 20px;
+      flex-direction: row;
+      justify-content: center;
+    }
+    @include desktop{
+      gap: 30px; 
+    }
+  }
   &__item {
     padding: 161px 39px 41px 41px;
     border-radius: 24px;
+    @include tablet{
+      padding: 152px 11px 40px 11px;
+      width: 220px;
+     
+    }
+    @include desktop{
+      padding: 163px 44px 50px 44px;
+      width: 329px;
+    }
+    
     &--ice-cream{
       background: #FFB8CA;
     }
@@ -34,6 +73,8 @@
   }
   &__name {
     font-family: $fontSecondary;
+    font-weight: 400;
+    font-style: normal;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
@@ -41,6 +82,24 @@
     color: $text-color-lighter;
 
     margin-bottom: 66px;
+
+    @include desktop{
+      font-size: 30px;
+      line-height: 1.13px;
+    }
+    
+    &::before{
+      content: "";
+      width: 249px;
+      height: 252px;
+      background-size: contain;
+    }
+
+    &::after{
+    
+     
+      }
+
   }
   &__description {
     font-family: $fontPrimary;
@@ -51,5 +110,11 @@
     color: $text-color-lighter;
 
     margin-bottom: 30px;
+    @include tablet{
+      line-height: 1.76;
+    }
+    @include desktop{
+      font-size: 16px;
+    }
   }
 }

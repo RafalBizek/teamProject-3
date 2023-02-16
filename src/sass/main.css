@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*
+ * Główny plik dla stylów.
+ * Wszystkie partials podłączamy tutaj.
+ */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+a {
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.products__subtitle {
+  text-align: center;
+  font-family: "Titan One", cursive;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFA5BA;
+  margin: 121px 0 15px;
+}
+@media screen and (min-width: 768px) {
+  .products__subtitle {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-top: 122px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__subtitle {
+    font-size: 30px;
+    line-height: 1.13;
+    margin-top: 127px;
+  }
+}
+.products__title {
+  font-family: "Titan One", cursive;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: #D41443;
+}
+@media screen and (min-width: 768px) {
+  .products__title {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__title {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products__items {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__items {
+    gap: 30px;
+  }
+}
+.products__item {
+  padding: 161px 39px 41px 41px;
+  border-radius: 24px;
+}
+@media screen and (min-width: 768px) {
+  .products__item {
+    padding: 152px 11px 40px 11px;
+    width: 220px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item {
+    padding: 163px 44px 50px 44px;
+    width: 329px;
+  }
+}
+.products__item--ice-cream {
+  background: #FFB8CA;
+}
+.products__item--ice-caffee {
+  background: #F0D1A5;
+}
+.products__item--milkshakes {
+  background: #C2E297;
+}
+.products__name {
+  font-family: "Titan One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  margin-bottom: 66px;
+}
+@media screen and (min-width: 1200px) {
+  .products__name {
+    font-size: 30px;
+    line-height: 1.13px;
+  }
+}
+.products__name::before {
+  content: "";
+  width: 249px;
+  height: 252px;
+  background-size: contain;
+}
+.products__description {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  color: #FFF;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .products__description {
+    line-height: 1.76;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__description {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=main.css.map */
