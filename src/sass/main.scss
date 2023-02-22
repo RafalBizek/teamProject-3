@@ -4,6 +4,10 @@
  */
 
 // Style dla pliku z przykładem HTML fragmentu
+@use './partials/modal_map';
+@use './partials/modal_mapfranc';
+@use './partials/modal_about';
+@use './partials/modal_buy';
 @import './utils/reset';
 @import './utils/variables';
 @import './utils/global';

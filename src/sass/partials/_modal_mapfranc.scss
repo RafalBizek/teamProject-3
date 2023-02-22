@@ -1,0 +1,119 @@
+@use '../utils/mixin' as mq;
+//section modal window ToDo:
+//Upstream settings:
+
+//Section settings
+//Modal window
+$modalWinowWidthMobile: 450px; //local
+$modalWinowHeightMobile: 609px; //local
+$modalWindowWidthDesktop: 528px; //local
+$modalWinowHeightDesktop: 581px; //local
+
+//Modal window closing button
+$closeBtnDistanceFromTopEdge: 8px; //local
+$closeBtnDistanceFromRightEdge: 8px; //local
+$closeBtnWidth: 30px; //local
+$closeBtnHeight: 30px; //local
+$closeBtnBackgroundColor: #fff; //upstream
+$closeBtnFillAnimation: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s; //upstream
+$closeBtnFillColor: #d41443; //upstream
+
+//Modal window container for content
+$containerWidthMobile: 370px; //local
+$containerWidthDesktop: 448px; //local
+
+//Modal window title
+$windowTitleFontWeight: 700; //local
+$windowTitleFontSizeMobile: 20px; //local
+$windowTitleLineHeightMobile: 30px; //local
+$windowTitleLetterSpacingMobile: 0.03em; //local
+
+$windowTitleFontSizeDesktop: 20px; //local
+$windowTitleLineHeightDesktop: 23px; //local
+
+$windowTitleFontColor: #d41443; //upstream
+$windowTitleFreeSpacebelow: 12px; //local
+
+//CSS for section
+
+.modalmapfranc {
+  &__backdrop {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    opacity: 1;
+    cursor: not-allowed;
+
+    &--is-hidden {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.modalmapfranc-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $modalWinowWidthMobile;
+  min-height: $modalWinowHeightMobile;
+  @include mq.desktop {
+    width: $modalWindowWidthDesktop;
+    min-height: $modalWinowHeightDesktop;
+  }
+  transform: translate(-50%, -50%);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #fff5f6;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: initial;
+
+  &__close-btn {
+    position: absolute;
+    top: $closeBtnDistanceFromTopEdge;
+    right: $closeBtnDistanceFromRightEdge;
+    width: $closeBtnWidth;
+    height: $closeBtnHeight;
+    background-color: $closeBtnBackgroundColor;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: $closeBtnFillAnimation;
+
+    &:focus,
+    &:hover {
+      fill: $closeBtnFillColor;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    width: $containerWidthMobile;
+    @include mq.desktop {
+      width: $containerWidthDesktop;
+    }
+  }
+
+  &__paragraph-title {
+    font-weight: $windowTitleFontWeight;
+    font-size: $windowTitleFontSizeMobile;
+    line-height: calc($windowTitleLineHeightMobile / $windowTitleFontSizeMobile);
+    @include mq.desktop {
+      font-size: $windowTitleFontSizeDesktop;
+      line-height: calc($windowTitleLineHeightDesktop / $windowTitleFontSizeDesktop);
+    }
+    text-align: center;
+    letter-spacing: $windowTitleLetterSpacingMobile;
+    color: $windowTitleFontColor;
+    padding-bottom: $windowTitleFreeSpacebelow;
+  }
+}
