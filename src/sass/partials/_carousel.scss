@@ -16,7 +16,7 @@
     transition: opacity 0.5s;
 }
 
-.carousel-indicators {
+.carousel-nav {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -28,19 +28,19 @@
     z-index: 10;
 }
 
-.carousel-indicators li {
+.carousel-nav li {
     display: inline-block;
     margin: 0 6px;
 }
 
-.carousel-bullet {
+.carousel-button {
 color: $background-color-review-btn;
     cursor: pointer;
 font-size: 45px;
 }
 
-#carousel-1:checked ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+#carousel-1:checked ~ .carousel-nav li:nth-child(1) .carousel-button,
+#carousel-2:checked ~ .carousel-nav li:nth-child(2) .carousel-button,
+#carousel-3:checked ~ .carousel-nav li:nth-child(3) .carousel-button {
 color: $accent-color;
 }
